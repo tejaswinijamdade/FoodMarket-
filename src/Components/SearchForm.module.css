@@ -1,0 +1,183 @@
+.Form,
+.List {
+  max-width: 420px;
+  width: 100%;
+  /* margin: 12px auto; */
+ 
+  /* border: 1px solid rgb(214, 172, 172); */
+  border-radius: 10px;
+  
+}
+.Form{
+  /* padding: 3px 850px 30px 0px; */
+  /* border:1px solid black; */
+  /* margin: 400px; */
+  position:fixed;
+  top: 400px;
+  left: 50px;
+}
+.List{
+  padding: 24px;
+}
+
+.FormField {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6px;
+  border: 1px solid;
+}
+
+.FormField > input {
+  outline: none;
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.FormField > input:focus {
+  box-shadow: 0 0.3px 0.9px rgba(0, 0, 0, 0.12),0 1.6px 3.6px rgba(0, 0, 0, 0.12);
+  transition: 0.1s all ease;
+  border: 1px solid transparent;
+}
+
+.FormField > label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.Action {
+  display: flex;
+  place-content: center;
+}
+
+.SubmitButton {
+  background-color: var(--primary-color, #ff5722);
+  border: none;
+  padding: 8px;
+  box-shadow: 0 0.3px 0.9px rgba(0, 0, 0, 0.12),0 1.6px 3.6px rgba(0, 0, 0, 0.12);
+  outline: none;
+  color: var(--primary-on-color, #fff);
+  cursor: pointer;
+}
+
+/* LIST SECTION */
+
+.List {
+  max-width: calc(100% - 100px);
+
+  /* position: fixed; */
+}
+.List{
+  margin-left: 300px;
+ 
+}
+.ListItemWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 3;
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
+  max-width: none;
+ 
+}
+
+
+.List img {
+  width: 64px;
+}
+.ListTitle{
+  font-weight: 10px;
+}
+
+@media (max-width: 599px) {
+  .ListItemWrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.ListTitle {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.ListItem {
+  border-radius: 10px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.ListItem:hover {
+  background-color: #dddddd;
+  box-shadow: 0 0.3px 0.9px rgba(0, 0, 0, 0.12),
+    0 1.6px 3.6px rgba(0, 0, 0, 0.12);
+}
+
+.ListLink {
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.sidebar{
+  display: inline-block;
+  left:10px;
+  position: absolute;
+  text-decoration: none;
+}
+
+.listimage{
+  width: 10%;
+  height: 10%;
+  display: inline-block;
+  position: fixed;
+}
+
+.sideimg{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+}
+.sidenav {
+  height: 1000px;
+  width: 200px; /* Set the width of the sidebar */
+  position: absolute; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 270px; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+ 
+  
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  
+}
